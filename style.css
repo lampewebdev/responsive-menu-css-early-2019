@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+:root {
+  --main-font-color: rgba(255, 255, 255, 0.75);
+  --main-font-color-hover: rgba(255, 255, 255, 1);
+  --main-padding: 10px;
+  --main-font-family:  'Source Sans Pro', sans-serif;
+}
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--main-font-family);
+  font-size: 18px;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+/* General styles */
+body {
+  background: url(https://source.unsplash.com/0Bj1foVFTdU) center no-repeat;
+  background-size: cover;
+}
+
+.fas {
+  color: var(--main-font-color-hover);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  padding: var(--main-padding);
+  background: linear-gradient(to right, #4568dc, #b06ab3);
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--main-font-color);
+  letter-spacing: 1px;
+  user-select: none;
+  cursor: pointer;
+}
+
+nav a:hover {
+  color: var(--main-font-color-hover);
+}
+
+nav input,
+nav label {
+  display: none;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  padding-left: var(--main-padding);
+}
+
+/* media queries */
+@media only screen and (max-width: 426px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+  }
+
+  nav ul li {
+    text-align: center;
+    padding: var(--main-padding) 0;
+  }
+
+  nav label {
+    display: flex;
+  }
+
+  input:checked + label + ul {
+    display: none;
+  }
+}
